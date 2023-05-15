@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <mat-card>
+                    <form (ngSubmit)="updateProfile()">
+                        <mat-form-field appearance="outline" class="w100">
+                            <mat-label>First Name</mat-label>
+                            <input 
+                            [(ngModel)]="user.firstName" type="text" matInput name="firstName" required=""/>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w100">
+                            <mat-label>Last Name</mat-label>
+                            <input
+                            [(ngModel)]="user.lastName" type="text" matInput name="lastName" required=""/>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w100">
+                            <mat-label>Email</mat-label>
+                            <input 
+                            [(ngModel)]="user.email" type="email" matInput name="email" required=""/>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w100">
+                            <mat-label>Phone</mat-label>
+                            <input 
+                            [(ngModel)]="user.phone" type="number" matInput name="phone" required=""/>
+                        </mat-form-field>
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary" type="submit">Update</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+{{user | json}}
